@@ -20,3 +20,5 @@ config ZMK_SPLIT
     default y
 
 endif
+
+CONFIG_ZMK_BEHAVIOR_POINTING_SCROLL=y
