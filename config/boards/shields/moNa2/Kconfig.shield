@@ -1,13 +1,7 @@
-if SHIELD_MONA2_R
-
 config SHIELD_MONA2_R
     def_bool $(shields_list_contains,moNa2_R)
-
-endif
-
-if SHIELD_MONA2_L
+    select ZMK_BEHAVIOR_POINTING_SCROLL
 
 config SHIELD_MONA2_L
     def_bool $(shields_list_contains,moNa2_L)
-
-endif
+    select ZMK_BEHAVIOR_POINTING_SCROLL
