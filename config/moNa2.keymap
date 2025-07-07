@@ -24,15 +24,6 @@
     };
 
     behaviors {
-        hold_scroll: hold_scroll {
-            compatible = "zmk,behavior-macro";
-            label = "HOLD_SCROLL";
-            #binding-cells = <0>;
-            bindings = <&macro_press &pointing_scroll_enable>,
-                     <&macro_pause_for_release>,
-                     <&macro_release &pointing_scroll_disable>;
-        };
-
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
