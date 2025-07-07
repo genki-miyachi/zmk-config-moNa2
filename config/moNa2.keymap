@@ -25,12 +25,11 @@
 
     behaviors {
         hold_scroll: hold_scroll {
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-hold-tap";
             label = "HOLD_SCROLL";
-            #binding-cells = <0>;
-            bindings = <&macro_press &pse>,
-                     <&macro_pause_for_release>,
-                     <&macro_release &psd>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
         };
 
         lt_to_layer_0: lt_to_layer_0 {
@@ -122,11 +121,13 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                              &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans         &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &hold_scroll 5 K_NO   &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                       &trans
             >;
+
+            sensor-bindings = <&scroll_up_down>;
         };
     };
 };
