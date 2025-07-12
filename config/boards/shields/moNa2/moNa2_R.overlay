@@ -25,13 +25,13 @@
         // 通常のカーソル移動
         input-processors = <&zip_xy_scaler 3 2>;
         // AMLの設定（レイヤ6に10000ms）
-        input-processors = <&zip_temp_layer 6 10000>;
+        input-processors = <&zip_temp_layer 6 500>;
 
         // スクロールレイヤの設定
         scroller {
             // レイヤ5が有効な時にカーソル移動をスクロールに変換
             layers = <5>;
-            input-processors = <&zip_xy_to_scroll_mapper>;
+            input-processors = <&zip_xy_to_scroll_mapper 0 1>;
         };
 
     };
