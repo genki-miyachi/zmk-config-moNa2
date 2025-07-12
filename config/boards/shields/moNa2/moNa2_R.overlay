@@ -1,6 +1,4 @@
 #include "moNa2.dtsi"
-
-// 追加
 #include <input/processors.dtsi>
 
 &default_transform {
@@ -18,20 +16,26 @@
 };
 
 / {
+    // カスタムスクロールスケーラーを定義
+    custom_scroll_scaler: custom_scroll_scaler {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_WHEEL>, <INPUT_REL_HWHEEL>;
+    };
+
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
         // 通常のカーソル移動
-        input-processors = <&zip_xy_scaler 3 2>;
-        // AMLの設定（レイヤ6に10000ms）
-        input-processors = <&zip_temp_layer 6 500>;
+        input-processors = <&zip_xy_scaler 3 2>, <&zip_temp_layer 6 500>;
 
         // スクロールレイヤの設定
         scroller {
             // レイヤ5が有効な時にカーソル移動をスクロールに変換
             layers = <5>;
-            input-processors = <&zip_xy_to_scroll_mapper>;
+            input-processors = <&zip_xy_to_scroll_mapper>, <&custom_scroll_scaler 3 1>;
         };
 
     };
