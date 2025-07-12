@@ -29,7 +29,7 @@
         device = <&trackball>;
 
         // 通常のカーソル移動
-        input-processors = <&zip_temp_layer 6 500>;
+        input-processors = <&zip_temp_layer 6 10000>;
 
         // スクロールレイヤの設定
         scroller {
