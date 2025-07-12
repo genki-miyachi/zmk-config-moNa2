@@ -22,10 +22,8 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        // 通常のカーソル移動
-        input-processors = <&zip_xy_scaler 3 2>;
-        // AMLの設定（レイヤ6に10000ms）
-        input-processors = <&zip_temp_layer 6 10000>;
+        // 2つのinput-processorsを1行に統合し、カーソル速度とAMLを両立させます。
+        input-processors = <&zip_xy_scaler 3 2 &zip_temp_layer 6 10000>;
 
         // スクロールレイヤの設定
         scroller {
@@ -70,8 +68,9 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        automouse-layer = <6>;
-        scroll-layers = <5>;
+        /* 新しいtrackball_listenerと機能が重複するため、以下の設定は不要です */
+        /* automouse-layer = <6>; */
+        /* scroll-layers = <5>; */
 
     };
 };
