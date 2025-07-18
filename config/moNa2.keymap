@@ -66,7 +66,7 @@
 &trans          &trans        &trans        &kp LCTRL     &kp TAB       &trans    &mo 3   &kp RIGHT_COMMAND                                     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         layer_2 {
@@ -82,10 +82,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &kp K_MUTE    &kp C_STOP      &kp LS(LC(LG(NUMBER_4)))                    &kp LA(LC(U))  &kp LA(LC(I))  &kp LA(LC(ENTER))  &trans             &pw_button
-&trans  &trans  &kp C_VOL_UP  &kp C_NEXT      &kp LS(LG(NUMBER_4))      &trans    &trans  &kp LA(LC(J))  &kp LA(LC(K))  &kp LA(LC(LEFT))   &kp LA(LC(RIGHT))  &trans
-&trans  &trans  &kp C_VOL_DN  &kp C_PREVIOUS  &kp LS(LG(NUMBER_5))      &trans    &trans  &kp LG(SPACE)  &trans         &kp LA(LC(DOWN))   &kp LA(LC(UP))     &trans
-&trans  &trans  &trans        &kp LEFT_GUI    &trans                    &trans    &trans  &trans                                                              &trans
+&trans  &trans  &kp K_MUTE    &kp C_PLAY_PAUSE  &kp LS(LC(LG(NUMBER_4)))                    &kp LA(LC(U))  &kp LA(LC(I))  &kp LA(LC(ENTER))  &trans             &pw_button
+&trans  &trans  &kp C_VOL_UP  &kp C_NEXT        &kp LS(LG(NUMBER_4))      &trans    &trans  &kp LA(LC(J))  &kp LA(LC(K))  &kp LA(LC(LEFT))   &kp LA(LC(RIGHT))  &trans
+&trans  &trans  &kp C_VOL_DN  &kp C_PREVIOUS    &kp LS(LG(NUMBER_5))      &trans    &trans  &kp LG(SPACE)  &trans         &kp LA(LC(DOWN))   &kp LA(LC(UP))     &trans
+&trans  &trans  &trans        &kp LEFT_GUI      &trans                    &trans    &trans  &trans                                                              &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
