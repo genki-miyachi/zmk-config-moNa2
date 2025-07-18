@@ -35,7 +35,7 @@
         scroller {
             // レイヤ5が有効な時にカーソル移動をスクロールに変換
             layers = <5>;
-            input-processors = <&zip_xy_scaler 1 4>, <&zip_xy_to_scroll_mapper>;
+            input-processors = <&zip_xy_scaler 1 100>, <&zip_xy_to_scroll_mapper>;
         };
 
     };
