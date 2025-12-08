@@ -66,7 +66,7 @@
 &trans          &trans        &trans        &kp LCTRL     &kp TAB       &trans    &mo 3   &kp RIGHT_COMMAND                                     &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
         };
 
         layer_2 {
@@ -74,10 +74,10 @@
 &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                                       &kp CARET       &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK
 &kp LCTRL        &trans       &trans    &trans      &kp INT_YEN       &trans         &trans           &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SQT
 &kp LEFT_SHIFT   &trans       &trans    &trans      &kp PERIOD        &trans         &trans           &kp UNDERSCORE  &kp PLUS       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE
-&trans           &trans       &trans    &kp LCTRL   &kp LEFT_COMMAND  &lt 3 SPACE    &kp RIGHT_SHIFT  &trans                                                                      &kp NON_US_BACKSLASH
+&trans           &trans       &trans    &kp LCTRL   &kp LEFT_COMMAND  &lt 3 SPACE    &kp RIGHT_SHIFT  &trans                                                                      &kp BACKSLASH
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
         };
 
         layer_3 {
@@ -88,7 +88,7 @@
 &trans  &trans  &trans        &kp LEFT_GUI      &trans                    &trans    &trans  &trans                                                              &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
         };
 
         layer_4 {
